@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/e-shop-styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="scripts/shopping-list.js"></script>
+	<script src="scripts/catalog.js"></script>
+	<script src="scripts/lodash.core.js"></script>
+	<title>E-Shop:Home</title>
+</head>
+<body>
+	    <main id="main-block">
+        <header id="global-header">
+        </header>
+        <div id="page-title">
+            <h1>E-Shop</h1>
+        </div>
+        <div id="shop-form">
+				<div class="shop-form__row-1">
+					    <div id="product-name">
+						   	<p>Search product</p>
+						    <input id="product-input" type="text" name="product-name">
+			            </div>
+			            <div id="product-size">
+						   	<p>Size</p>
+						    <input id="size-input" type="text" name="product-name">
+			            </div>
+	            </div>      
+                <div class="shop-form__row-2">
+               	  <input type="button" name="search" id="search-button" value="Search" required onclick="getInput()">
+                </div>
+        </div>
+        <div class="results">
+			   <span class="results__header">
+				   <p class="results__product">Name</p>
+				   <p class="results__price">Price</p>
+				   <p class="results__company">Company</p>
+			   </span>
+               <ul id="search-results">
+               </ul>
+	    </div>
+</body>
+</html>
