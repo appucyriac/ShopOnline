@@ -44,22 +44,21 @@ searchCatalog = () => {
 		if (allNamesWithSize.length != 0) {
 			found=allNamesWithSize;
 			lsh.set("found",JSON.stringify(found));
-			i=0;
 			_.forEach(found, function(value) {
-				$("#search-results").append("<li class=resultRow"+i+">"+
+				$("#search-results").append("<li class=resultRow>"+
 					'<input type="checkbox" class="'+value.id+'"/>' + value.name +
 				 "&emsp;&emsp;&emsp;" + value.price + "&emsp;&emsp;&emsp;" + value.company +
 				 '<input type="number" class="temp" min=0>' + "</li>");
-				i=i+1;
 			});
 		} else {
 			if (allNamesWithSize == "") {
 				found=allNamesWithType;
 				lsh.set("found",JSON.stringify(found));
 				_.forEach(found, function(value) {
-					$("#search-results").append("<li>" + value.name + 
-						"&emsp;&emsp;&emsp;" + value.price + "&emsp;&emsp;&emsp;"
-						 + value.company + "</li>");
+				$("#search-results").append("<li class=resultRow>"+
+					'<input type="checkbox" class="'+value.id+'"/>' + value.name +
+				 "&emsp;&emsp;&emsp;" + value.price + "&emsp;&emsp;&emsp;" + value.company +
+				 '<input type="number" class="temp" min=0>' + "</li>");
 				});
 			} else {
 				$(".results__header").hide();
