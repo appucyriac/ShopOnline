@@ -23,14 +23,42 @@ const products = [{
 		"price": 8,
 		"discount": 4
 	}, {
-		"id": "1",
+		"id": "4",
 		"company": "a",
 		"name": "blue candle",
 		"type": "candle",
 		"size": "medium",
 		"price": 12,
 		"discount": 5
+	},
+	{
+		"id": "5",
+		"company": "lux",
+		"name": "blueberry",
+		"type": "soap",
+		"size": "bath",
+		"price": 30,
+		"discount": 5
+	},
+	{
+		"id": "6",
+		"company": "lifebouy",
+		"name": "red",
+		"type": "soap",
+		"size": "bath",
+		"price": 20,
+		"discount": 3
+	},
+		{
+		"id": "6",
+		"company": "colgate",
+		"name": "maxfresh",
+		"type": "toothpaste",
+		"size": "big",
+		"price": 20,
+		"discount": 3
 	}
+
 
 ]
 const gst = {
@@ -43,5 +71,7 @@ let local = new localStorageHandler();
 $(document).ready(() => {
 	local.set("product-catalog", JSON.stringify(products));
 	local.set("gst", JSON.stringify(gst));
+	cart=[];
+	local.set("cart",JSON.stringify(cart));
 
 });

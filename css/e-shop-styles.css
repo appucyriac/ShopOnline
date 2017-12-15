@@ -1,6 +1,10 @@
 ul{
     list-style: none;
 }
+input[type="number"]{
+    width: 30px;
+    margin-left: 40px;
+}
 .shop-form__row-1{
     margin-left: 100px;
 }
@@ -27,51 +31,44 @@ ul{
     margin-left: 180px;
     margin-top: -34px;
 }
-.log-row{
-    background: white;
-    height: 30px;
-    margin-right: 12px;
-    border-style: solid;
-    border-width: thin;
-    color: white;
-    margin-top: 24px;
-    margin-bottom: 20px;
-    outline: none;
-    position: relative;
-    margin-left: 47px;
-    color: grey;
-    display: block;
-    margin-left: 7px;
-    border-color: lightgray;
-}
-.log-row-col-1{
-    margin-left: 30px;
-    font-family: Verdana,sans-serif,Helvetica;
-    font-size: 12px;
-    margin-top: 15px;
-}
-.log-row-col-2{
-    margin-left: 300px;
-    margin-top: -60px;
-    color: #666;
-}
-.log-row-col-3{
-    padding-left: 1078px;
-    margin-top: -36px;
-    font-family: Verdana,sans-serif,Helvetica;
-    font-size: 12px;
-}
-.chooseProduct{
-    float: right;
-}
-.proceedButton{
+/*********************checkout****************************/
+.checkout-box{
     display: none;
-    margin-left: 42px;
+    margin-left: 100px;
 }
-input[type="number"]{
-    width: 30px;
+.checkout-box__header{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+/*****************buttons*******************************/
+.cart-button{
+    display: none;
     margin-left: 40px;
 }
-.checkout-box,.total{
+.cart-button__proceedToCheckoutButton
+{
+    display: none;
+}
+/************************bill******************/
+.bill{
+    margin-left: 100px;
+    display: none;
+}
+.bill__list{
+    margin-left: -40px;
+}
+.bill__grand-total{
+    font-weight: bold;
+}
+/***********************msgs********************************/
+.qty-empty-warning,.checked-empty-warning{
+    color: red;
+    margin-left: 100px;
+    display: none;
+}
+.cart-block{
+    float: right;
+    margin-right: 100px;
+    margin-top: -320px;
     display: none;
 }

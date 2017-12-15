@@ -1,50 +1,72 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<link rel="stylesheet" type="text/css" href="css/e-shop-styles.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="scripts/shopping-list.js"></script>
-	<script src="scripts/catalog.js"></script>
-	<script src="scripts/lodash.core.js"></script>
-	<title>E-Shop:Home</title>
+    <link rel="stylesheet" type="text/css" href="css/e-shop-styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="scripts/shopping-list.js"></script>
+    <script src="scripts/catalog.js"></script>
+    <script src="scripts/lodash.core.js"></script>
+    <title>E-Shop:Home</title>
 </head>
+
 <body>
-	    <main id="main-block">
+    <main id="main-block">
         <header id="global-header">
         </header>
         <div id="page-title">
             <h1>E-Shop</h1>
         </div>
         <div id="shop-form">
-				<div class="shop-form__row-1">
-					    <div id="product-name">
-						   	<p>Search product</p>
-						    <input id="product-input" type="text" name="product-name">
-			            </div>
-			            <div id="product-size">
-						   	<p>Size</p>
-						    <input id="size-input" type="text" name="product-name">
-			            </div>
-	            </div>      
-                <div class="shop-form__row-2">
-               	  <input type="button" name="search" id="search-button" value="Search" required onclick="getInput()">
+            <div class="shop-form__row-1">
+                <div id="product-name">
+                    <p>Search product</p>
+                    <input id="product-input" type="text" name="product-name">
                 </div>
+                <div id="product-size">
+                    <p>Size</p>
+                    <input id="size-input" type="text" name="product-name">
+                </div>
+            </div>
+            <div class="shop-form__row-2">
+                <input type="button" name="search" id="search-button" value="Search" required onclick="getInput()">
+            </div>
         </div>
         <div class="results">
-			   <span class="results__header">
+            <span class="results__header">
 				   <p class="results__product">Name</p>
 				   <p class="results__price">Price</p>
 				   <p class="results__company">Company</p>
 			   </span>
-               <ul id="search-results">
-               </ul>
-               <input type="button" name="proceed" class="proceedButton" onclick="addToCart()" value="Add To Cart">
-	    </div>
-	    <div class="checkout-box">
+            <ul id="search-results">
+            </ul>
+            <div class="cart-button">
+	            <input type="button" name="proceed" class="addToButton" onclick="addToCart()" value="Add To Cart">
+	            <input type="button" name="checkout" value="Proceed to checkout" class="cart-button__proceedToCheckoutButton" onclick="calculateAmount()">
+            </div>
+        </div>
+        <div class="cart-block">
+        	<h1>Cart</h1>
+        	<ul class="cart-box">
+        	</ul>
+        </div>
+
+        <div class="checkout-box">
+            <span class="checkout-box__header">
 	    	<span>Item</span>
-	    	<span>Quantity</span>
-	    	<span>Price</span>
-	    </div>
-	    <div class="total"><span>Total</span></div>
+            <span>Quantity</span>
+            <span>Price</span>
+            </span>
+            <ul class="bill__list">
+            </ul>
+        </div>
+        <div class="bill">
+        	<p class="bill__grand-total"></p>
+            <p class="bill__saved"></p>
+            <p class="bill__gst-amount"></p>   
+            <a href="order-placed.html"><input type="button" name="chkout" value="Checkout"></a>
+        </div>
+        <p class="qty-empty-warning">Please enter quantity required</p>
+        <p class="checked-empty-warning">Please choose product</p>
 </body>
 </html>
